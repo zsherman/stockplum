@@ -1,0 +1,11 @@
+{
+  "name": "stockplum",
+  "version": "0.0.0",
+  "description": "I can feel it...in my plums.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zach Sherman",
+  "license": "ISC"
+}
