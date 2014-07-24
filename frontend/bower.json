@@ -17,6 +17,7 @@
   ],
   "devDependencies": {
     "normalize.css": "~3.0.1",
-    "moment": "~2.7.0"
+    "moment": "~2.7.0",
+    "bourbon": "~4.0.2"
   }
 }

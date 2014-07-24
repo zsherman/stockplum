@@ -5,6 +5,8 @@
   "private": true,
   "author": "John Doe",
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.7.3",
     "lineman": "~0.33.4",
     "lineman-angular": "^0.2.0",
     "lineman-bower": "0.0.3",

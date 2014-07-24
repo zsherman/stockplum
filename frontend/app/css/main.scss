@@ -1,12 +1,7 @@
-h1 {
-  text-decoration: underline;
-}
+@import "../../vendor/bower/bourbon/dist/bourbon";
+@import "../../vendor/bower/bitters/app/assets/stylesheets/base";
+@import "../../vendor/bower/neat/app/assets/stylesheets/neat";
 
 body {
-  border: 15px solid #000;
-  font-size: 12px;
-
-  h1 {
-    font-size: 12px;
-  }
+  background: #000;
 }
