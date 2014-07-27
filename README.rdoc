@@ -11,6 +11,10 @@ Things you may want to cover:
 
 * Configuration
 
+Compiling bourbon requires sass 3.3 which sass-rails does not support, therefore in order to run lineman you might need to uncomment out sass-rails temporarily and add 'gem sass' to the gemfile.
+
+Almost everything should get compiled in lineman with a bower install, however using neat with bourbon requires some changes to the core scss files, make sure to replicate those (find instruction on github/neat) before running the app.
+
 * Database creation
 
 * Database initialization

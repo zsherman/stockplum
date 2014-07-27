@@ -6,7 +6,10 @@ gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+# Temporarily disable sass-rails so we can use bourbon 4.0
+# It depends on SASS 3.3 and sass-rails depends on 3.2
+# Make sure to change back and precompile for production
+# gem 'sass-rails', '~> 4.0.3'
 gem 'sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

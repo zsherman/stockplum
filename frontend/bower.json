@@ -18,6 +18,8 @@
   "devDependencies": {
     "normalize.css": "~3.0.1",
     "moment": "~2.7.0",
-    "bourbon": "~4.0.2"
+    "bourbon": "~4.0.2",
+    "jquery": "~2.1.1",
+    "neat": "~1.6.0"
   }
 }
