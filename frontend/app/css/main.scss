@@ -3,9 +3,55 @@
 @import "../../vendor/bower/neat/app/assets/stylesheets/neat";
 @import "grid-settings";
 
+// Typography
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
 // Variables
 $base-body-color: #fff;
 
+
+// Individual Stock Page Styles
+
+.container {
+  font-family: 'Roboto', sans-serif;
+}
+
+.search {
+  @include fill-parent;
+  height: 60px;
+  background: #fff;
+  color: #000;
+  input {
+    height: 100%;
+    height: 60px;
+    border-radius: 0px;
+  }
+}
+
+.stock-info {
+  @include outer-container;
+  text-align: center;
+  width: 700px;
+}
+
+.stats {
+  @include fill-parent;
+  position: fixed;
+  bottom: 0px;
+  ul {
+    li {
+      float: left;
+      padding: 10px;
+      background: #000;
+      color: #fff;
+      width: 16.66%;
+      text-align: center;
+    }
+  }
+}
+
+
+// Homepage Grid Styles
 @mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }
