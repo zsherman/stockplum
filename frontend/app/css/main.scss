@@ -19,6 +19,7 @@ html, body {
 // Individual Stock Page Styles
 
 .container {
+  @include clearfix;
   font-family: $roboto-font;
   background: #E84F88;
   color: #fff;
@@ -96,6 +97,28 @@ html, body {
 
   .stock-change {
     font-weight: 300;
+  }
+}
+
+.chart-container {
+  .chart {
+    height: 158px;
+    width: 100%;
+    background: url("../../img/chart.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .x-axis {
+    ul.scale {
+      li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        color: #fff;
+        font-family: $roboto-font;
+      }
+    }
   }
 }
 
