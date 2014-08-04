@@ -4,27 +4,60 @@
 @import "grid-settings";
 
 // Typography
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+// @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+$roboto-font: 'Roboto', sans-serif;
 
 // Variables
 $base-body-color: #fff;
+
+// Global Styles
+html, body {
+  height: 100%;
+}
 
 
 // Individual Stock Page Styles
 
 .container {
-  font-family: 'Roboto', sans-serif;
+  font-family: $roboto-font;
+  background: #E84F88;
+  color: #fff;
+  height: 100%;
 }
 
 .search {
   @include fill-parent;
-  height: 60px;
+  height: 75px;
   background: #fff;
   color: #000;
+  position: relative;
+
   input {
-    height: 100%;
-    height: 60px;
+    height: 75px;
     border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    font-size: 17px;
+    color: #000;
+    text-transform: uppercase;
+    font-family: $roboto-font;
+    letter-spacing: 0.05em;
+    padding-left: 42px;
+    @include placeholder {
+      font-size: 17px;
+      color: #B4B4B4;
+      text-transform: uppercase;
+      font-family: $roboto-font;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 26px;
+    left: 12px;
+    color: #B4B4B4;
+    font-size: 20px;
   }
 }
 
@@ -32,6 +65,38 @@ $base-body-color: #fff;
   @include outer-container;
   text-align: center;
   width: 700px;
+  margin-top: 5%;
+}
+
+.name-container {
+  .stock-name {
+    font-weight: 300;
+    font-family: $roboto-font;
+
+    .market {
+      text-transform: uppercase;
+    }
+  }
+
+  .stock-symbol {
+    font-family: $roboto-font;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.price-container {
+  padding-top: 65px;
+
+  .stock-price {
+    font-family: $roboto-font;
+    font-weight: 100;
+    font-size: 104px;
+  }
+
+  .stock-change {
+    font-weight: 300;
+  }
 }
 
 .stats {
@@ -46,6 +111,7 @@ $base-body-color: #fff;
       color: #fff;
       width: 16.66%;
       text-align: center;
+      font-family: $roboto-font;
     }
   }
 }
