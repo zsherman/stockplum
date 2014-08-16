@@ -1,0 +1,1 @@
+// Grab csrf toke from rails via get/ajax

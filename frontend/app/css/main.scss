@@ -3,163 +3,170 @@
 @import "../../vendor/bower/neat/app/assets/stylesheets/neat";
 @import "grid-settings";
 
+///////////////////////////////////////////////
+//////////////// Global Styles ////////////////
+///////////////////////////////////////////////
+
 // Typography
-// @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 $roboto-font: 'Roboto', sans-serif;
 
 // Variables
 $base-body-color: #fff;
 
-// Global Styles
+// Style defaults
 html, body {
   height: 100%;
 }
 
+//////////////////////////////////////////////////////////////
+//////////////// Individual Stock Page Styles ////////////////
+//////////////////////////////////////////////////////////////
 
-// Individual Stock Page Styles
-
-.container {
+.stock-page {
   @include clearfix;
   font-family: $roboto-font;
   background: #E84F88;
   color: #fff;
   height: 100%;
-}
 
-.search {
-  @include fill-parent;
-  height: 75px;
-  background: #fff;
-  color: #000;
-  position: relative;
-
-  input {
+  .search {
+    @include fill-parent;
     height: 75px;
-    border-radius: 0px;
-    border: none;
-    box-shadow: none;
-    font-size: 17px;
+    background: #fff;
     color: #000;
-    text-transform: uppercase;
-    font-family: $roboto-font;
-    letter-spacing: 0.05em;
-    padding-left: 42px;
-    @include placeholder {
+    position: relative;
+
+    input {
+      height: 75px;
+      border-radius: 0px;
+      border: none;
+      box-shadow: none;
       font-size: 17px;
-      color: #B4B4B4;
+      color: #000;
       text-transform: uppercase;
       font-family: $roboto-font;
       letter-spacing: 0.05em;
+      padding-left: 42px;
+      @include placeholder {
+        font-size: 17px;
+        color: #B4B4B4;
+        text-transform: uppercase;
+        font-family: $roboto-font;
+        letter-spacing: 0.05em;
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 26px;
+      left: 12px;
+      color: #B4B4B4;
+      font-size: 20px;
     }
   }
 
-  i {
-    position: absolute;
-    top: 26px;
-    left: 12px;
-    color: #B4B4B4;
-    font-size: 20px;
+  .stock-info {
+    @include outer-container;
+    text-align: center;
+    width: 700px;
+    margin-top: 5%;
   }
-}
 
-.stock-info {
-  @include outer-container;
-  text-align: center;
-  width: 700px;
-  margin-top: 5%;
-}
+  .name-container {
+    .stock-name {
+      font-weight: 300;
+      font-family: $roboto-font;
 
-.name-container {
-  .stock-name {
-    font-weight: 300;
-    font-family: $roboto-font;
+      .market {
+        text-transform: uppercase;
+      }
+    }
 
-    .market {
+    .stock-symbol {
+      font-family: $roboto-font;
+      font-weight: 500;
       text-transform: uppercase;
     }
   }
 
-  .stock-symbol {
-    font-family: $roboto-font;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-}
+  .price-container {
+    padding-top: 65px;
 
-.price-container {
-  padding-top: 65px;
-
-  .stock-price {
-    font-family: $roboto-font;
-    font-weight: 100;
-    font-size: 104px;
-  }
-
-  .stock-change {
-
-    .currency {
-      font-weight: 400;
+    .stock-price {
+      font-family: $roboto-font;
+      font-weight: 100;
+      font-size: 104px;
     }
 
-    .percentage {
-      font-weight: 200;
+    .stock-change {
+
+      .currency {
+        font-weight: 400;
+      }
+
+      .percentage {
+        font-weight: 200;
+      }
     }
   }
-}
 
-.chart-container {
-  .chart {
-    height: 158px;
-    width: 100%;
-    background: url("../../img/chart.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+  .chart-container {
+    .chart {
+      height: 158px;
+      width: 100%;
+      background: url("../../img/chart.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .x-axis {
+      ul.scale {
+        li {
+          float: left;
+          width: 25%;
+          text-align: center;
+          color: #fff;
+          font-family: $roboto-font;
+        }
+      }
+    }
   }
 
-  .x-axis {
-    ul.scale {
+  .stats {
+    @include fill-parent;
+    position: fixed;
+    bottom: 0px;
+    ul {
       li {
         float: left;
-        width: 25%;
+        padding: 10px;
+        background: #000;
+        color: #fff;
+        width: 16.66%;
         text-align: center;
-        color: #fff;
         font-family: $roboto-font;
-      }
-    }
-  }
-}
 
-.stats {
-  @include fill-parent;
-  position: fixed;
-  bottom: 0px;
-  ul {
-    li {
-      float: left;
-      padding: 10px;
-      background: #000;
-      color: #fff;
-      width: 16.66%;
-      text-align: center;
-      font-family: $roboto-font;
+        .stat-name {
+          color: #7D7D7D;
+          display: block;
+          text-transform: uppercase;
+        }
 
-      .stat-name {
-        color: #7D7D7D;
-        display: block;
-        text-transform: uppercase;
-      }
-
-      .stat-value {
-        color: #fff;
-        font-size: 34px;
-        font-weight: 300;
+        .stat-value {
+          color: #fff;
+          font-size: 34px;
+          font-weight: 300;
+        }
       }
     }
   }
 }
 
 
-// Homepage Grid Styles
+//////////////////////////////////////////////////////
+//////////////// Homepage Grid Styles ////////////////
+//////////////////////////////////////////////////////
+
 @mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }

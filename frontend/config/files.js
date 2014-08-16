@@ -13,6 +13,10 @@ module.exports = require(process.env["LINEMAN_MAIN"]).config.extend("files", {
       "vendor/bower/angular-route/angular-route.js",
       "vendor/bower/moment/moment.js",
       "vendor/js/**/*.js"  // Note that this glob remains for traditional vendor libs
+    ],
+    app: [
+      "app/js/app.js",
+      "app/js/**/*.js"
     ]
   },
 
