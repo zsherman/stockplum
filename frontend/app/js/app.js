@@ -1,2 +1,2 @@
 // Stockplum Core Application
-angular.module("app", []);
+angular.module("app", ['ngRoute']);

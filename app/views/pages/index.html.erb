@@ -1,19 +1,20 @@
-<div class="stock-page container">
+<div ng-view></div>
+<!-- <div class="stock-page container">
   <section class="search">
     <input type="text" placeholder="Search"/>
     <i class="fa fa-search"></i>
   </section>
   <section class="stock-info">
     <div class="name-container">
-      <h3 class="stock-name">Tesla Motors <span class="market">(nasdaq)</span></h3>
-      <h4 class="stock-symbol">tsla</h4>
+      <h3 class="stock-name">{{stock.name}} <span class="market">({{stock.market}})</span></h3>
+      <h4 class="stock-symbol">{{stock.symbol}}</h4>
     </div>
     <div class="price-container">
       <h1 class="stock-price">223.57</h1>
       <h2 class="stock-change">
         <i class="fa fa-chevron"></i>
-        <span class="currency">$0.03</span>
-        <span class="percentage">(0.01%)</span>
+        <span class="currency">{{stock.currencyChange | currency}}</span>
+        <span class="percentage">({{stock.percentageChange}}%)</span>
       </h2>
     </div>
     <div class="chart-container">
@@ -56,7 +57,7 @@
       </li>
     </ul>
   </section>
-</div>
+</div> -->
 
 <!-- Home page grid markup -->
 <!-- <div class="grid-items">
