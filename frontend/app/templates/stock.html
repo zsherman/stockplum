@@ -9,11 +9,11 @@
       <h4 class="stock-symbol">{{stock.symbol}}</h4>
     </div>
     <div class="price-container">
-      <h1 class="stock-price">223.57</h1>
+      <h1 class="stock-price">{{ stock.price }}</h1>
       <h2 class="stock-change">
         <i class="fa fa-chevron"></i>
-        <span class="currency">{{stock.currencyChange | currency}}</span>
-        <span class="percentage">({{stock.percentageChange}}%)</span>
+        <span class="currency">{{ stock.currency_change | currency }}</span>
+        <span class="percentage">({{ stock.percent_change }}%)</span>
       </h2>
     </div>
     <div class="chart-container">
