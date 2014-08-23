@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 Stock.create!(symbol: 'APPL', name: 'Apple', price: 223.57, currency_change: 0.03, percent_change: 0.01, market: 'nasdaq')
 Stock.create!(symbol: 'MSFT', name: 'Microsoft', price: 220.01, currency_change: 0.04, percent_change: 0.02, market: 'nasdaq')
 Stock.create!(symbol: 'GOOG', name: 'Google', price: 23.51, currency_change: 0.05, percent_change: 0.03, market: 'nasdaq')

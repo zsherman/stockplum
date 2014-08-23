@@ -6,7 +6,8 @@ class StocksController < ApplicationController
   end
 
   def symbol
-    respond_with Stock.find_by_symbol(params[:symbol].upcase)
+    @stock = StockQuote::Stock.quote(params[:symbol].upcase)
+    respond_with @stock
   end
 
   # def safe_params
