@@ -9,11 +9,11 @@
       <h4 class="stock-symbol">{{stock.symbol}}</h4>
     </div>
     <div class="price-container">
-      <h1 class="stock-price">{{ stock.price }}</h1>
+      <h1 class="stock-price">{{ stock.bid }}</h1>
       <h2 class="stock-change">
         <i class="fa fa-chevron"></i>
-        <span class="currency">{{ stock.currency_change | currency }}</span>
-        <span class="percentage">({{ stock.percent_change }}%)</span>
+        <span class="currency">{{ stock.change | currency }}</span>
+        <span class="percentage">({{ stock.changein_percent }})</span>
       </h2>
     </div>
     <div class="chart-container">
@@ -32,27 +32,27 @@
     <ul class="stats-list">
       <li>
         <span class="stat-name">Open</span>
-        <span class="stat-value">222.72</span>
+        <span class="stat-value">{{stock.open}}</span>
       </li>
       <li>
         <span class="stat-name">High</span>
-        <span class="stat-value">226.97</span>
+        <span class="stat-value">{{stock.year_high}}</span>
       </li>
       <li>
         <span class="stat-name">Low</span>
-        <span class="stat-value">221.75</span>
+        <span class="stat-value">{{stock.year_low}}</span>
       </li>
       <li>
         <span class="stat-name">Volume</span>
-        <span class="stat-value">3,090,383</span>
+        <span class="stat-value">{{stock.volume}}</span>
       </li>
       <li>
         <span class="stat-name">Avg Vol</span>
-        <span class="stat-value">5,880,000</span>
+        <span class="stat-value">{{stock.average_daily_volume}}</span>
       </li>
       <li>
         <span class="stat-name">Mkt Cap</span>
-        <span class="stat-value">27.74B</span>
+        <span class="stat-value">{{stock.market_capitalization}}</span>
       </li>
     </ul>
   </section>
