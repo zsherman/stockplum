@@ -17,4 +17,8 @@
 /node_modules
 /vendor/assets/components
 /node_modules
+/api.rb
 
+
+# Ignore application configuration
+/config/application.yml

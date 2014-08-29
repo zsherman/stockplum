@@ -25,7 +25,22 @@ Almost everything should get compiled in lineman with a bower install, however u
 
 * Deployment instructions
 
-* ...
+* Libraries in Use
+
+angular-ui.github.io
+https://github.com/HubSpot/pace
+https://github.com/rileyjshaw/sweep
+http://www.amcharts.com/
+http://www.tnoda.com/blog/2013-12-19
+http://www.highcharts.com/stock/demo/basic-line/dark-unica
+
+* Potential Data Sources
+http://www.kibot.com/historical_data/All_Stocks_Historical_Intraday_Data.aspx
+http://www.quandl.com/help/api-for-stock-data
+http://www.xignite.com/product/BATS-real-time-stock-quotes-data/
+http://markitondemand.com
+http://stocklytics.com
+
 
 
 Please feel free to use a different markup language if you do not plan to run
