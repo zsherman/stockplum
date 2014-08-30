@@ -27,21 +27,63 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
     $('.chart').highcharts('StockChart', {
       rangeSelector : {
           selected : 1,
-          inputEnabled: false //$('.chart').width() > 480
+          inputEnabled: false, //$('.chart').width() > 480
+          enabled: false
       },
 
       title : {
-          text : 'Stock Price'
+          enabled: false
       },
 
       chart: {
         backgroundColor: '#E84F88',
       },
 
+      legend: {
+        enabled: false
+      },
+
+      subtitle: {
+        enabled: false
+      },
+
+      tooltip: {
+        backgroundColor: {
+            linearGradient: {
+                x1: 0,
+                y1: 0,
+                x2: 0,
+                y2: 1
+            },
+            stops: [
+                [0, 'white'],
+                [1, '#EEE']
+            ]
+        },
+        borderColor: 'gray',
+        borderWidth: 1,
+        crosshairs: false
+      },
+
+      scrollbar: {
+        enabled: false
+      },
+
+      navigator: {
+        enabled: false
+      },
+
+      yAxis: {
+          gridLineColor: '#E84F88',
+          labels : {
+            enabled: false
+          }
+      },
+
       plotOptions : {
         area: {
           color: '#ffffff',
-          lineColor: '#ffffff'
+          lineColor: '#ffffff',
         },
 
         series: {
