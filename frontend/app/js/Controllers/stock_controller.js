@@ -1,12 +1,11 @@
 angular.module("app").controller('StockCtrl', function ($scope, $http, $routeParams, $resource, Stock) {
+
   var symbol = $routeParams.stockSymbol;
+
   var stock = $http.get('/api/stocks/symbol/' + symbol).success(function(data) {
     $scope.stock = data;
     console.log(data);
   });
-
-  // Should happen on success of yahoo stock call
-  // Timeout for now
 
   var chart = $http.get('/api/stocks/chart/' + symbol).success(function(data) {
     console.log(data);
@@ -18,7 +17,7 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
       var point = [];
       point.push(parseFloat(moment.utc(v.datetime).unix() * 1000));
       point.push(parseFloat(v.last));
-      prices.push(point); // might need to wrap in brackets
+      prices.push(point);
     });
 
     $scope.chart = prices;
@@ -80,6 +79,12 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
           }
       },
 
+      xAxis: {
+        labels: {
+          enabled: false
+        }
+      },
+
       plotOptions : {
         area: {
           color: '#ffffff',
@@ -87,7 +92,7 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
         },
 
         areaspline: {
-            fillOpacity: 0.5
+          fillOpacity: 0.5
         },
 
         series: {

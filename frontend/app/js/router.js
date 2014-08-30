@@ -5,11 +5,9 @@ angular.module("app").config(function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
         templateUrl: 'dashboard.html',
-        controller: 'DashCtrl'
       }).
       when('/stocks/:stockSymbol', {
-        templateUrl: 'stock.html',
-        controller: 'StockCtrl'
+        templateUrl: 'stock.html'
       }).
       otherwise({
         redirectTo: '/'

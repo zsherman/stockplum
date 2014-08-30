@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get '/api/stocks/symbol/:symbol' => 'stocks#symbol', defaults: {format: :json}
   get '/api/stocks/chart/:symbol' => 'stocks#chart', defaults: {format: :json}
+  get '/api/articles/' => 'stocks#articles', defaults: {format: :json}
 
   root 'pages#index', anchor: false
 

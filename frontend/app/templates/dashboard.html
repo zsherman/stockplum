@@ -1,1 +1,7 @@
-<h1>Welcome to the Dashboard!</h1>
+<div class="dashboard" ng-controller="DashCtrl">
+  <div class="stories sidebar">
+    <ul>
+      <li ng-repeat="article in articles">{{article.headline}}</li>
+    </ul>
+  </div>
+</div>
