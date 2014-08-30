@@ -23,7 +23,7 @@ class StocksController < ApplicationController
     @chart = client.get(
       "market/timesales",
       {
-        symbols: "AAPL",
+        symbols: @symbol,
         startdate: "2012-04-06",
         interval: "5min"
       }

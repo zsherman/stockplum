@@ -5,6 +5,10 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
     console.log(data);
   });
 
+  // Should happen on success of yahoo stock call
+  // Timeout for now
+  setTimeout(function() {
+
   var chart = $http.get('/api/stocks/chart/' + symbol).success(function(data) {
     console.log(data);
 
@@ -23,11 +27,26 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
     $('.chart').highcharts('StockChart', {
       rangeSelector : {
           selected : 1,
-          inputEnabled: $('.chart').width() > 480
+          inputEnabled: false //$('.chart').width() > 480
       },
 
       title : {
           text : 'Stock Price'
+      },
+
+      chart: {
+        backgroundColor: '#E84F88',
+      },
+
+      plotOptions : {
+        area: {
+          color: '#ffffff',
+          lineColor: '#ffffff'
+        },
+
+        series: {
+          color: "#ffffff"
+        }
       },
 
       series : [{
@@ -39,5 +58,6 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
       }]
     });
   });
+}, 2500);
 
 });
