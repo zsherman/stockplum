@@ -32,6 +32,10 @@ class StocksController < ApplicationController
     respond_with @chart
   end
 
+  def stories
+
+  end
+
   # def safe_params
   #   params.permit(:description, :priority, :completed)
   # end

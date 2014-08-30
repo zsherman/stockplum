@@ -23,6 +23,46 @@ html, body {
   height: 100%;
 }
 
+///////////////////////////////////////////////////
+//////////////// Search Bar Styles ////////////////
+///////////////////////////////////////////////////
+
+.search {
+  @include fill-parent;
+  height: 75px;
+  background: #fff;
+  color: #000;
+  position: relative;
+
+  input {
+    height: 75px;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    font-size: 17px;
+    color: #000;
+    text-transform: uppercase;
+    font-family: $roboto-font;
+    letter-spacing: 0.05em;
+    padding-left: 42px;
+    @include placeholder {
+      font-size: 17px;
+      color: #B4B4B4;
+      text-transform: uppercase;
+      font-family: $roboto-font;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 26px;
+    left: 12px;
+    color: #B4B4B4;
+    font-size: 20px;
+  }
+}
+
 //////////////////////////////////////////////////////////////
 //////////////// Individual Stock Page Styles ////////////////
 //////////////////////////////////////////////////////////////
@@ -33,42 +73,6 @@ html, body {
   background: #E84F88;
   color: #fff;
   height: 100%;
-
-  .search {
-    @include fill-parent;
-    height: 75px;
-    background: #fff;
-    color: #000;
-    position: relative;
-
-    input {
-      height: 75px;
-      border-radius: 0px;
-      border: none;
-      box-shadow: none;
-      font-size: 17px;
-      color: #000;
-      text-transform: uppercase;
-      font-family: $roboto-font;
-      letter-spacing: 0.05em;
-      padding-left: 42px;
-      @include placeholder {
-        font-size: 17px;
-        color: #B4B4B4;
-        text-transform: uppercase;
-        font-family: $roboto-font;
-        letter-spacing: 0.05em;
-      }
-    }
-
-    i {
-      position: absolute;
-      top: 26px;
-      left: 12px;
-      color: #B4B4B4;
-      font-size: 20px;
-    }
-  }
 
   .stock-info {
     @include outer-container;

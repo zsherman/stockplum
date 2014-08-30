@@ -7,13 +7,13 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
 
   // Should happen on success of yahoo stock call
   // Timeout for now
-  setTimeout(function() {
 
   var chart = $http.get('/api/stocks/chart/' + symbol).success(function(data) {
     console.log(data);
 
     var prices = [];
 
+    // Change to vanilla for-loop for speed boost
     $.each(data.quotes.quote, function(i,v) {
       var point = [];
       point.push(parseFloat(moment.utc(v.datetime).unix() * 1000));
@@ -86,6 +86,10 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
           lineColor: '#ffffff',
         },
 
+        areaspline: {
+            fillOpacity: 0.5
+        },
+
         series: {
           color: "#ffffff"
         }
@@ -100,6 +104,5 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
       }]
     });
   });
-}, 2500);
 
 });
