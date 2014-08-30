@@ -16,6 +16,7 @@ $base-body-color: #fff;
 // Style defaults
 html, body {
   height: 100%;
+  background: #E84F88;
 }
 
 .ng-scope {
@@ -118,7 +119,7 @@ html, body {
     .chart {
       height: 158px;
       width: 100%;
-      background: url("../../img/chart.png");
+      //background: url("../../img/chart.png");
       background-size: contain;
       background-repeat: no-repeat;
     }

@@ -24,6 +24,7 @@
     "angular": "~1.2.21",
     "lodash": "~2.4.1",
     "angular-resource": "~1.2.21",
-    "angular-route": "~1.2.21"
+    "angular-route": "~1.2.21",
+    "highstock": "~3.0.1"
   }
 }
