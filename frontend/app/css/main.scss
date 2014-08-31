@@ -166,13 +166,21 @@ body {
     margin-bottom: 15px;
     height: 150px;
     color: #fff;
+
+    a {
+      height: 100%;
+      width: 100%;
+      display: block;
+      color: #fff;
+      font-size: 36px;
+    }
   }
 
-  .stock:nth-child(even) {
+  .stock.down {
     background: #E84F88;
   }
 
-  .stock:nth-child(odd) {
+  .stock.up {
     background: #6ACCCB;
   }
 }

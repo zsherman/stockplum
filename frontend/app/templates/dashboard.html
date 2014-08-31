@@ -5,7 +5,10 @@
     </ul>
   </aside>
   <div class="stock-list" id="page-content-wrapper">
-    <div class="stock" ng-repeat="stock in tracked">
-      <span>{{stock.name}}</span>
+    <div class="stock" ng-repeat="stock in stockList" ng-class="upOrDown(stock) ? 'up' : 'down'">
+      <a href="/stocks/{{stock.symbol}}">
+        <span>{{stock.symbol}}</span>
+        <span>{{stock.last_trade_price_only}}</span>
+      </a>
     </div>
 </div>

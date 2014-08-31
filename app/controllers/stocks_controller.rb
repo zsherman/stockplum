@@ -1,6 +1,6 @@
 class StocksController < ApplicationController
   respond_to :json
-  before_action :init_tradeking, only: [:chart, :articles]
+  before_action :init_tradeking, only: [:chart, :articles, :stock_list]
 
   def show
     respond_with Stock.find_by_id(params[:id])
@@ -9,6 +9,11 @@ class StocksController < ApplicationController
   def symbol
     @stock = StockQuote::Stock.quote(params[:symbol].upcase)
     respond_with @stock
+  end
+
+  def stock_list
+    @stocks = StockQuote::Stock.quote(params[:symbols])
+    respond_with @stocks
   end
 
   def chart
@@ -27,7 +32,6 @@ class StocksController < ApplicationController
   end
 
   def articles
-
     @articles = @client.get(
       "market/news/search",
       {
