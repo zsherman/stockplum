@@ -15,6 +15,7 @@ $base-body-color: #fff;
 
 // Responsive grid settings
 $mobile: new-breakpoint(max-width 500px 4);
+$small-screen: new-breakpoint(max-width 920px);
 
 // Style defaults
 html, body {
@@ -159,9 +160,12 @@ body {
   .stock {
     @include span-columns(3);
     @include omega(4n);
+
     @include media($mobile) {
-      @include span-columns(6);
+      @include span-columns(2);
+      @include omega(2n)
     }
+
     background: #ccc;
     margin-bottom: 15px;
     height: 150px;

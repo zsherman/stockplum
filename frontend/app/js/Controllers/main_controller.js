@@ -4,6 +4,7 @@ angular.module("app").controller('MainCtrl', function ($scope, $http, $routePara
     {symbol: "SCTY", name: "Solar City"},
     {symbol: "AAPL", name: "Apple Computers"},
     {symbol: "MSFT", name: "Microsoft"},
-    {symbol: "API", name: "API"}
+    {symbol: "API", name: "API"},
+    {symbol: "BKW", name: "BKW"}
   ];
 });

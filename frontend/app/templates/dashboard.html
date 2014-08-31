@@ -7,8 +7,8 @@
   <div class="stock-list" id="page-content-wrapper">
     <div class="stock" ng-repeat="stock in stockList" ng-class="upOrDown(stock) ? 'up' : 'down'">
       <a href="/stocks/{{stock.symbol}}">
-        <span>{{stock.symbol}}</span>
-        <span>{{stock.last_trade_price_only}}</span>
+        <p>{{stock.symbol}}</p>
+        <p>{{stock.last_trade_price_only}}</p>
       </a>
     </div>
 </div>
