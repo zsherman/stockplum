@@ -19,7 +19,7 @@ $mobile: new-breakpoint(max-width 500px 4);
 // Style defaults
 html, body {
   height: 100%;
-  background: #E84F88;
+  background: #ECF0F1;
 }
 
 .ng-scope {
@@ -144,6 +144,7 @@ html, body {
 
 .stock-list {
   @include outer-container;
+  padding: 15px;
 
   .stock {
     @include span-columns(3);
@@ -152,6 +153,17 @@ html, body {
       @include span-columns(6);
     }
     background: #ccc;
+    margin-bottom: 15px;
+    height: 150px;
+    color: #fff;
+  }
+
+  .stock:nth-child(even) {
+    background: #E84F88;
+  }
+
+  .stock:nth-child(odd) {
+    background: #6ACCCB;
   }
 }
 
