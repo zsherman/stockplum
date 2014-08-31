@@ -1,11 +1,11 @@
 <div class="dashboard" ng-controller="DashCtrl">
-  <aside class="stories sidebar">
-    <ul>
+  <aside class="stories sidebar" id="sidebar-wrapper">
+    <ul class="sidebar-nav">
       <li ng-repeat="article in articles">{{article.headline}}</li>
     </ul>
   </aside>
-  <div class="stock-list">
+  <div class="stock-list" id="page-content-wrapper">
     <div class="stock" ng-repeat="stock in tracked">
       <span>{{stock.name}}</span>
-  </div>
+    </div>
 </div>

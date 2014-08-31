@@ -13,6 +13,9 @@ $roboto-font: 'Roboto', sans-serif;
 // Variables
 $base-body-color: #fff;
 
+// Responsive grid settings
+$mobile: new-breakpoint(max-width 500px 4);
+
 // Style defaults
 html, body {
   height: 100%;
@@ -21,6 +24,60 @@ html, body {
 
 .ng-scope {
   height: 100%;
+}
+
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background: #fff;
+  position: fixed;
+  top: 75px;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:767px) {
+
+  #wrapper {
+    padding-left: 0;
+  }
+
+  #sidebar-wrapper {
+    left: 0;
+  }
+
+  #wrapper.active {
+    position: relative;
+    left: 250px;
+  }
+
+  #wrapper.active #sidebar-wrapper {
+    left: 250px;
+    width: 250px;
+    transition: all 0.4s ease 0s;
+  }
+
 }
 
 ///////////////////////////////////////////////////
@@ -68,16 +125,34 @@ html, body {
 //////////////////////////////////////////////////
 
 .sidebar {
-  position: fixed;
+  position: absolute;
   left: 0;
+  top: 0;
   height: 100%;
   width: 320px;
   background: #fff;
   border: 1px solid #ccc;
+  overflow-y: scroll;
+
+  ul {
+    li {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+  }
 }
 
 .stock-list {
-  float: right;
+  @include outer-container;
+
+  .stock {
+    @include span-columns(3);
+    @include omega(4n);
+    @include media($mobile) {
+      @include span-columns(6);
+    }
+    background: #ccc;
+  }
 }
 
 //////////////////////////////////////////////////////////////
