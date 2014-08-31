@@ -8,6 +8,12 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
     console.log(data);
   });
 
+  // Set Background
+  $scope.upOrDown = function(stock) {
+    var direction = stock.changein_percent.charAt(0) === "+";
+    return direction;
+  };
+
   // Get articles from TradeKing
   $http({
       url:'/api/articles',
@@ -51,10 +57,14 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
       },
 
       chart: {
-        backgroundColor: '#E84F88',
+        backgroundColor: 'transparent',
       },
 
       legend: {
+        enabled: false
+      },
+
+      credits: {
         enabled: false
       },
 
@@ -63,18 +73,7 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
       },
 
       tooltip: {
-        backgroundColor: {
-            linearGradient: {
-                x1: 0,
-                y1: 0,
-                x2: 0,
-                y2: 1
-            },
-            stops: [
-                [0, 'white'],
-                [1, '#EEE']
-            ]
-        },
+        backgroundColor: {},
         borderColor: 'gray',
         borderWidth: 1,
         crosshairs: false
@@ -89,16 +88,21 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
       },
 
       yAxis: {
-          gridLineColor: '#E84F88',
+          gridLineColor: 'transparent',
           labels : {
             enabled: false
           }
       },
 
       xAxis: {
+        lineWidth: 0,
+        minorGridLineWidth: 0,
+        lineColor: 'transparent',
         labels: {
           enabled: false
-        }
+        },
+        minorTickLength: 0,
+        tickLength: 0
       },
 
       plotOptions : {

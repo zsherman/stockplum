@@ -12,6 +12,8 @@ $roboto-font: 'Roboto', sans-serif;
 
 // Variables
 $base-body-color: #fff;
+$up: #6ACCCB;
+$down: #E84F88;
 
 // Responsive grid settings
 $mobile: new-breakpoint(max-width 500px 4);
@@ -25,6 +27,14 @@ html, body {
 
 body {
 
+}
+
+.up {
+  background: $up;
+}
+
+.down {
+  background: $down;
 }
 
 .ng-scope {
@@ -103,6 +113,10 @@ body {
       padding: 20px;
       border-top: 1px solid #ccc;
       color: #000;
+
+      &:hover {
+        background: #eee;
+      }
     }
   }
 }
@@ -180,13 +194,6 @@ body {
     }
   }
 
-  .stock.down {
-    background: #E84F88;
-  }
-
-  .stock.up {
-    background: #6ACCCB;
-  }
 }
 
 //////////////////////////////////////////////////////////////
@@ -196,7 +203,6 @@ body {
 .stock-page {
   @include clearfix;
   font-family: $roboto-font;
-  background: #E84F88;
   color: #fff;
   height: 100%;
 

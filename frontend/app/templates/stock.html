@@ -1,5 +1,5 @@
-<div class="stock-page container" ng-controller="StockCtrl">
-  <aside class="stories sidebar" id="sidebar-wrapper">
+<div class="stock-page container" ng-controller="StockCtrl" ng-class="upOrDown(stock) ? 'up' : 'down'">
+  <aside class="articles sidebar" id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li ng-repeat="article in articles">{{article.headline}}</li>
     </ul>
@@ -20,12 +20,12 @@
     <div class="chart-container">
       <div class="chart" style="height: 320px; min-width: 250px"></div>
       <div class="x-axis">
-        <ul class="scale">
+        <!-- <ul class="scale">
           <li>Day</li>
           <li>Week</li>
           <li>Month</li>
           <li>Year</li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </section>
