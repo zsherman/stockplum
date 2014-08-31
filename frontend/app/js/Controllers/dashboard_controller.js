@@ -28,9 +28,5 @@ angular.module("app").controller('DashCtrl', function ($scope, $http, $routePara
     $scope.articles = response.data.articles.article;
   });
 
-  $scope.upOrDown = function(stock) {
-    var direction = stock.changein_percent.charAt(0) === "+";
-    return direction;
-  };
 
 });

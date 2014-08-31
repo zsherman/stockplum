@@ -8,12 +8,6 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
     console.log(data);
   });
 
-  // Set Background
-  $scope.upOrDown = function(stock) {
-    var direction = stock.changein_percent.charAt(0) === "+";
-    return direction;
-  };
-
   // Get articles from TradeKing
   $http({
       url:'/api/articles',

@@ -106,6 +106,7 @@ body {
   border: 1px solid #ccc;
   border-left: none;
   overflow-y: scroll;
+  z-index: 1000;
 
   ul {
     margin-top: 74px;
@@ -119,6 +120,29 @@ body {
       }
     }
   }
+
+}
+
+.panel-left {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  position: absolute;
+  display: none;
+  bottom: 0;
+  top: 1px;
+  left: 0;
+  transition: all 0.3s ease;
+  width: 0px;
+}
+
+.panel-left.closed {
+  width: 0px;
+  display: none;
+}
+
+.panel-left.open {
+  width: 95%;
+  display: block;
 }
 
 ///////////////////////////////////////////////////
@@ -170,6 +194,7 @@ body {
 .stock-list {
   @include outer-container;
   padding: 15px;
+  position: relative;
 
   .stock {
     @include span-columns(3);
@@ -180,7 +205,6 @@ body {
       @include omega(2n)
     }
 
-    background: #ccc;
     margin-bottom: 15px;
     height: 150px;
     color: #fff;
