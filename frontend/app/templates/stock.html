@@ -1,12 +1,9 @@
 <div class="stock-page container" ng-controller="StockCtrl">
-  <!-- Put into partal -->
-  <!-- <section class="search">
-    <form class="search-form">
-      <input type="text" placeholder="Search"/>
-      <i class="fa fa-search"></i>
-    </form>
-  </section> -->
-  <!-- End Partial -->
+  <aside class="stories sidebar" id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li ng-repeat="article in articles">{{article.headline}}</li>
+    </ul>
+  </aside>
   <section class="stock-info">
     <div class="name-container">
       <h3 class="stock-name">{{ stock.name }} <span class="market">{{ stock.market }}</span></h3>
@@ -21,7 +18,7 @@
       </h2>
     </div>
     <div class="chart-container">
-      <div class="chart" style="height: 400px; min-width: 310px"></div>
+      <div class="chart" style="height: 320px; min-width: 250px"></div>
       <div class="x-axis">
         <ul class="scale">
           <li>Day</li>
@@ -33,7 +30,7 @@
     </div>
   </section>
   <section class="stats">
-    <ul class="stats-list">
+    <!-- <ul class="stats-list">
       <li>
         <span class="stat-name">Open</span>
         <span class="stat-value">{{stock.open}}</span>
@@ -58,6 +55,6 @@
         <span class="stat-name">Mkt Cap</span>
         <span class="stat-value">{{stock.market_capitalization}}</span>
       </li>
-    </ul>
+    </ul> -->
   </section>
 </div>

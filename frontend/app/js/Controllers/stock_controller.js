@@ -2,11 +2,25 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
 
   var symbol = $routeParams.stockSymbol;
 
+  // Get stock info from Yahoo
   var stock = $http.get('/api/stocks/symbol/' + symbol).success(function(data) {
     $scope.stock = data;
     console.log(data);
   });
 
+  // Get articles from TradeKing
+  $http({
+      url:'/api/articles',
+      method: 'GET',
+      params: {
+        symbols: symbol,
+      }
+  }).then(function (response) {
+    $scope.articles = response.data.articles.article;
+  });
+
+
+  // Get chart from TradeKing
   var chart = $http.get('/api/stocks/chart/' + symbol).success(function(data) {
     console.log(data);
 
@@ -23,6 +37,8 @@ angular.module("app").controller('StockCtrl', function ($scope, $http, $routePar
     $scope.chart = prices;
     console.log(prices);
 
+
+    // Build stock chart
     $('.chart').highcharts('StockChart', {
       rangeSelector : {
           selected : 1,
