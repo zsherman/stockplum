@@ -1,2 +1,2 @@
 // Stockplum Core Application
-angular.module("app", ['ngRoute', 'ngResource']);
+angular.module("app", ['ngRoute', 'ngResource', 'firebase']);

@@ -11,6 +11,9 @@ module.exports = require(process.env["LINEMAN_MAIN"]).config.extend("files", {
       "vendor/bower/angular/angular.js",
       "vendor/bower/angular-resource/angular-resource.js",
       "vendor/bower/angular-route/angular-route.js",
+      "vendor/bower/firebase/firebase.js",
+      "vendor/bower/angularfire/dist/angularfire.js",
+      "vendor/bower/firebase-simple-login/firebase-simple-login.js",
       "vendor/bower/moment/moment.js",
       "vendor/bower/highstock/js/highstock.src.js",
       "vendor/js/**/*.js"  // Note that this glob remains for traditional vendor libs

@@ -1,4 +1,4 @@
-angular.module("app").controller('StockCtrl', function ($scope, $http, $routeParams, $resource, Stock) {
+angular.module("app").controller('StockCtrl', function ($scope, $http, $routeParams, $resource, $firebase, Stock) {
 
   var symbol = $routeParams.stockSymbol;
 

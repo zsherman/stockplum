@@ -1,4 +1,12 @@
-angular.module("app").controller('MainCtrl', function ($scope, $http, $routeParams, $resource) {
+angular.module("app").controller('MainCtrl', function ($scope, $rootScope, $http, $routeParams, $resource, $firebase, $firebaseSimpleLogin) {
+
+  // Initialize Firebase
+  var stockFire = new Firebase('https://stockplum.firebaseio.com/');
+
+  // Initialize user auth
+  var auth = $firebaseSimpleLogin(stockFire);
+
+  // Get tracked stocks
   $scope.tracked = [
     {symbol: "TSLA", name: "Tesla Motors"},
     {symbol: "SCTY", name: "Solar City"},
@@ -7,11 +15,6 @@ angular.module("app").controller('MainCtrl', function ($scope, $http, $routePara
     {symbol: "API", name: "API"},
     {symbol: "BKW", name: "BKW"}
   ];
-
-  $('.sidebar li').click(function(e) {
-    console.log('open');
-    $('.panel').addClass('open');
-  });
 
   $scope.upOrDown = function(stock) {
     var direction = stock.changein_percent.charAt(0) === "+";
